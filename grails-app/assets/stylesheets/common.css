@@ -43,6 +43,7 @@ div.btn:hover{
   transition: background-color .5s, width .5s, height .5s, opacity .4s;
   overflow: hidden;
   opacity: 0;
+  z-index: 9999;
 }
 .modal.visible{
   opacity: 1;

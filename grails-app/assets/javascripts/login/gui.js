@@ -35,15 +35,7 @@ $(()=>{
         login: login.val()
       }
 
-      post(`/login`, data, (data, status) => {
-        if(data.error === false)
-          onLoginDone(data);
-        else
-          showError(data.message);
-
-        console.log(data);
-        console.log(status);
-      })
+      post(`/login`, data, onLoginDone)
     })
   }
   function modalSetup(){
@@ -60,7 +52,6 @@ $(()=>{
       post(`/usuario`, data, (data, status) => {
         login.val(data.login);
         modcl.click();
-        showMessage(`Bem vindo, ${data.nome}`)
         onCadastroDone(data);
       })
     })
