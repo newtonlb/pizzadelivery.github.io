@@ -14,5 +14,7 @@ class UrlMappings {
 		}
     "/"(controller:"login")
 		"500"(view:'/error')
+	"/pedido/pizzaria" (view: "/pedido/pizzaria")
+	"/pedido/cliente" (view: "/pedido/cliente")
 	}
 }
